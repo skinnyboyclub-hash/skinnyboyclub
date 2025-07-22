@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>SKINNY BOYS (not for long)</title>
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+  <style>
+    html, body {
+      margin: 0;
+      background: black;
+      font-family: 'Share Tech Mono', monospace;
+      overflow: hidden;
+    }
+
+    video {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      object-fit: cover;
+      z-index: -1;
+    }
+
+    .center-text {
+      position: absolute;
+      top: 40%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: white;
+      font-size: 3rem;
+      text-shadow: 2px 2px 8px black;
+      text-align: center;
+      user-select: none;
+      white-space: nowrap;
+    }
+
+    .button-row {
+      position: absolute;
+      top: 55%;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .button-row a {
+      background: #ff33cc;
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      margin: 0 10px;
+      border-radius: 6px;
+      font-size: 16px;
+      text-decoration: none;
+      box-shadow: 2px 2px 8px black;
+      transition: background 0.2s ease;
+    }
+
+    .button-row a:hover {
+      background: #e600aa;
+    }
+
+    .whitepaper-btn {
+      position: absolute;
+      bottom: 20px;
+      left: 20px;
+      background: white;
+      color: black;
+      padding: 6px 12px;
+      font-size: 14px;
+      border-radius: 4px;
+      text-decoration: none;
+    }
+
+    .reps-counter {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      color: white;
+      font-size: 16px;
+      text-shadow: 1px 1px 4px black;
+    }
+
+    .pig-emoji {
+      position: absolute;
+      bottom: 20px;
+      right: 20px;
+      font-size: 32px;
+      animation: spin 6s linear infinite;
+    }
+
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- Background Video -->
+  <video autoplay muted loop playsinline>
+    <source src="pushups.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <!-- Site Title -->
+  <div class="center-text">SKINNY BOYS (not for long)</div>
+
+  <!-- Button Row -->
+  <div class="button-row">
+    <a href="https://dexscreener.com" target="_blank">Buy $SKINNY</a>
+    <a href="https://x.com/SkinnyBoyClub" target="_blank">Post Your Rep</a>
+  </div>
+
+  <!-- Whitepaper Button -->
+  <a class="whitepaper-btn" href="#" onclick="alert(`$SKINNY\n\nA tokenized accountability cult.\n\nPost a timelapse, drop a wallet, receive 100,000 tokens.\n\nPush the body. Strengthen the chain.`)">Whitepaper</a>
+
+  <!-- Reps Counter -->
+  <div class="reps-counter">LIVE REPS: 203,189</div>
+
+  <!-- Pig Emoji -->
+  <div class="pig-emoji">🐷</div>
+
+</body>
+</html>
