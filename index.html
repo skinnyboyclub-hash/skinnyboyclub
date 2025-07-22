@@ -92,14 +92,13 @@
       0% { transform: rotate(0deg); }
       100% { transform: rotate(360deg); }
     }
-
   </style>
 </head>
 <body>
 
   <!-- Background Video -->
   <video autoplay muted loop playsinline>
-    <source src="pushups.mp4" type="video/mp4">
+    <source src="hosted_pushups.mp4" type="video/mp4">
     Your browser does not support the video tag.
   </video>
 
@@ -113,13 +112,22 @@
   </div>
 
   <!-- Whitepaper Button -->
-  <a class="whitepaper-btn" href="#" onclick="alert(`$SKINNY\n\nA tokenized accountability cult.\n\nPost a timelapse, drop a wallet, receive 100,000 tokens.\n\nPush the body. Strengthen the chain.`)">Whitepaper</a>
+  <a class="whitepaper-btn" href="#" onclick="alert(`$SKINNY\\n\\nA tokenized accountability cult.\\n\\nPost a timelapse, drop a wallet, receive 100,000 tokens.\\n\\nPush the body. Strengthen the chain.`)">Whitepaper</a>
 
   <!-- Reps Counter -->
-  <div class="reps-counter">LIVE REPS: 203,189</div>
+  <div class="reps-counter">LIVE REPS: <span id="repCount">203189</span></div>
 
   <!-- Pig Emoji -->
   <div class="pig-emoji">🐷</div>
 
+  <script>
+    let reps = 203189;
+    setInterval(() => {
+      reps++;
+      document.getElementById("repCount").textContent = reps.toLocaleString();
+    }, 1000);
+  </script>
+
 </body>
 </html>
+
