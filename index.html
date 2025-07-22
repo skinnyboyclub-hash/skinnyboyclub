@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>SKINNY BOYS (not for long)</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
   <style>
     html, body {
@@ -10,6 +11,7 @@
       background: black;
       font-family: 'Share Tech Mono', monospace;
       overflow: hidden;
+      height: 100%;
     }
 
     video {
@@ -28,7 +30,7 @@
       left: 50%;
       transform: translate(-50%, -50%);
       color: white;
-      font-size: 3rem;
+      font-size: 6vw;
       text-shadow: 2px 2px 8px black;
       text-align: center;
       user-select: none;
@@ -40,6 +42,9 @@
       top: 55%;
       left: 50%;
       transform: translateX(-50%);
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
     }
 
     .button-row a {
@@ -47,9 +52,9 @@
       color: white;
       border: none;
       padding: 12px 20px;
-      margin: 0 10px;
+      margin: 10px;
       border-radius: 6px;
-      font-size: 16px;
+      font-size: 4vw;
       text-decoration: none;
       box-shadow: 2px 2px 8px black;
       transition: background 0.2s ease;
@@ -66,7 +71,7 @@
       background: white;
       color: black;
       padding: 6px 12px;
-      font-size: 14px;
+      font-size: 3.5vw;
       border-radius: 4px;
       text-decoration: none;
     }
@@ -76,7 +81,7 @@
       top: 20px;
       left: 20px;
       color: white;
-      font-size: 16px;
+      font-size: 4vw;
       text-shadow: 1px 1px 4px black;
     }
 
@@ -84,7 +89,7 @@
       position: absolute;
       bottom: 20px;
       right: 20px;
-      font-size: 32px;
+      font-size: 8vw;
       animation: spin 6s linear infinite;
     }
 
@@ -92,13 +97,21 @@
       0% { transform: rotate(0deg); }
       100% { transform: rotate(360deg); }
     }
+
+    @media (min-width: 768px) {
+      .center-text { font-size: 3rem; }
+      .button-row a { font-size: 16px; }
+      .whitepaper-btn { font-size: 14px; }
+      .reps-counter { font-size: 16px; }
+      .pig-emoji { font-size: 32px; }
+    }
   </style>
 </head>
 <body>
 
   <!-- Background Video -->
   <video autoplay muted loop playsinline>
-    <source src="https://patata-files.nyc3.cdn.digitaloceanspaces.com/pushups-final.mp4" type="video/mp4">
+    <source src="pushups.mp4" type="video/mp4">
     Your browser does not support the video tag.
   </video>
 
@@ -112,7 +125,7 @@
   </div>
 
   <!-- Whitepaper Button -->
-  <a class="whitepaper-btn" href="#" onclick="alert(`$SKINNY\\n\\nA tokenized accountability cult.\\n\\nPost a timelapse, drop a wallet, receive 100,000 tokens.\\n\\nPush the body. Strengthen the chain.`)">Whitepaper</a>
+  <a class="whitepaper-btn" href="#" onclick="alert('$SKINNY\n\nA tokenized accountability cult.\n\nPost a timelapse, drop a wallet, receive 100,000 tokens.\n\nPush the body. Strengthen the chain.')">Whitepaper</a>
 
   <!-- Reps Counter -->
   <div class="reps-counter">LIVE REPS: <span id="repCount">203189</span></div>
@@ -130,4 +143,5 @@
 
 </body>
 </html>
+
 
